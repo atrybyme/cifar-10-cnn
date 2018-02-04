@@ -1,1 +1,51 @@
-# cifar-10-cnn
+# Some Convolutional Neural Network(CNN) Architectures for Classifying CIFAR-10 Dataset
+
+The repository contains some of the famous architectures on CNN implimented on cifar-10 dataset.
+
+![cifar10][1]
+
+I havev used **Keras** with **Tensorflow** backend to impliment all the architectures.
+All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics Processor.
+
+## Requirements:
+
+- Python(3.5.2/2.7.14)
+- Keras(2.0.8)
+- tensorflow-gpu(1.3.0)
+
+*These are what I used*
+
+## Dataset, Training, Testing and Additional Information:
+
+- To train your model from above codes download **CIFAR-10** dataset from [here][6].Extract and move all the batch files to your working directory.
+- If you want to test the architectures by pretrained models over test_dataset,Download the folder containing pretrained models from [here][7].Move all the .h5 files to your working directory,make sure you have test_batch also present in the same directory.Then run **testing_from_saved_model.py**.
+
+
+## Architectures and papers
+
+*Architecture of the model in this repository is slightly different from the one proposed in the papers.This was to reduce the trainable parameters in the model and make the model easy to train.*
+
+*No data augmentation techniques were used because the only aim was to understand and apply the models.*
+
+- **Le-Net**
+  - A classic and simple model.The model have alternate convolution and pooling layer.The output of these layer is connected to 2 Fully Connected Layer.Except the last one each layer uses *'Relu'* activation function.Last layer uses Softmax to classify.
+  - [LeNet-5][2]
+- **Network in Network**
+  - NIN instantiate the micro neural network with a multilayer perceptron, which is a potent function approximator. The feature maps are obtained by sliding the micro networks over the input in a similar manner as CNN; they are then fed into the next layer. Deep NIN can be implemented by stacking mutiple of the above described structure.
+  - [Network In Network][3]
+- **VGG16**
+  - It is a really deep network.This network has a total of about 138 million parameters but its very easy to understand.Instead having so many hyper parameters,the model uses a much simpler network where you focus on just having conv layers that are just 3 by 3 filters with stride 1 and always use the SAME padding, and make all your max polling layers 2 by 2 with a strid of 2.
+  -  [Very Deep Convolutional Networks for Large-Scale Image Recognition][4]
+- **Residual Network**
+  - Instead of hoping each stack of layers directly fits a desired underlying mapping, we explicitly let these layers fit a residual mapping. The original mapping is recast into F(x)+x.The residual learning framework eases the training of networks, and enables them to be substantially deeper  leading to improved performance in both visual and non-visual tasks. These residual networks are much deeper than their ‘plain’ counterparts, yet they require a similar number of parameters (weights).
+  - [Deep Residual Learning for Image Recognition][5]
+  
+  
+
+
+[1]: cifar10.png
+[2]: http://yann.lecun.com/exdb/lenet/
+[3]: https://arxiv.org/abs/1312.4400
+[4]: https://arxiv.org/abs/1409.1556
+[5]: https://arxiv.org/abs/1512.03385
+[6]: https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
