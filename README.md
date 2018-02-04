@@ -15,10 +15,10 @@ All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics P
 
 *These are what I used*
 
-## Dataset, Training, Testing and Additional Information:
+## Dataset, Training and Testing:
 
 - To train your model from above codes download **CIFAR-10** dataset from [here][6].Extract and move all the batch files to your working directory.
-- If you want to test the architectures by pretrained models over test_dataset,Download the folder containing pretrained models from [here][7].Move all the .h5 files to your working directory,make sure you have test_batch also present in the same directory.Then run **testing_from_saved_model.py**.
+- If you want to test the architectures by pretrained models over test_dataset,Download the folder containing pretrained models from [here][7].Move all the .h5 files to your working directory,make sure you have test_batch also present in the same directory.Open **testing_from_saved_model.py** and change the model_name to the name of the model you want to test and then Run it.
 
 
 ## Architectures and papers
@@ -40,7 +40,21 @@ All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics P
   - Instead of hoping each stack of layers directly fits a desired underlying mapping, we explicitly let these layers fit a residual mapping. The original mapping is recast into F(x)+x.The residual learning framework eases the training of networks, and enables them to be substantially deeper  leading to improved performance in both visual and non-visual tasks. These residual networks are much deeper than their ‘plain’ counterparts, yet they require a similar number of parameters (weights).
   - [Deep Residual Learning for Image Recognition][5]
   
-  
+## Accuracy
+
+|Architecture       |Training Time | Optimizer |Trainset Accuracy|Testset Accuracy|
+|:------------------|:-------------|:----------|:----------------|:---------------|
+|Le-Net             |
+|Network in Network |
+|VGG-16             |
+|Residual Network   |
+
+## Additional Information
+Because I don't have enough machines to train the larger networks.
+I decreased the epochs to 50.This decreased the accuracy.
+Also the models seems to overfit the training data. This is due to inefficient use of Dropout and due the fact that I did not used Image Augmentation. I will soon resolve this issue.
+
+**Please feel free to contact me for any questions and Suggestions.**
 
 
 [1]: cifar10.png
@@ -49,3 +63,4 @@ All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics P
 [4]: https://arxiv.org/abs/1409.1556
 [5]: https://arxiv.org/abs/1512.03385
 [6]: https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
+[7]: https://drive.google.com/drive/folders/1Y2UVn2TdkmaXZhjQbtoyPrelhkJgi9mF?usp=sharing
