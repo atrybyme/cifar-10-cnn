@@ -31,7 +31,7 @@ All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics P
   - A classic and simple model.The model have alternate convolution and pooling layer.The output of these layer is connected to 2 Fully Connected Layer.Except the last one each layer uses *'Relu'* activation function.Last layer uses Softmax to classify.
   - [LeNet-5][2]
 - **Network in Network**
-  - NIN instantiate the micro neural network with a multilayer perceptron, which is a potent function approximator. The feature maps are obtained by sliding the micro networks over the input in a similar manner as CNN; they are then fed into the next layer. Deep NIN can be implemented by stacking multiple of the above described structure.
+  - NIN instantiate a micro neural network with a multilayer perceptron, which is a potent function approximator. The feature maps are obtained by sliding the micro networks over the input in a similar manner as CNN; they are then fed into the next layer. Deep NIN can be implemented by stacking multiple of the above described structure.
   - [Network In Network][3]
 - **VGG16**
   - It is a really deep network.This network has a total of about 138 million parameters but its very easy to understand.Instead having so many hyper parameters,the model uses a much simpler network where you focus on just having conv layers that are just 3 by 3 filters with stride 1 and always use the SAME padding, and make all your max polling layers 2 by 2 with a strid of 2.
@@ -42,12 +42,12 @@ All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics P
   
 ## Accuracy
 
-|Architecture       |Training Time | Optimizer |Trainset Accuracy|Testset Accuracy|
-|:------------------|:-------------|:----------|:----------------|:---------------|
-|Le-Net             |5.43 min      |Adam       |85%              |70.4%           |
-|Network in Network |48 min        |Adam       |98.2%            |82.78%          |
-|VGG-16             |98 min        |Adam       |99.2%            |85.5%           |
-|Residual Network   |86.6 min      |Adam       |98.54%           |81%             |*
+|Architecture       |Training Time | Optimizer |Trainingset Accuracy|Testset Accuracy|Trainable Parameters|
+|:------------------|:-------------|:----------|:-------------------|:---------------|:-------------------|
+|Le-Net             |5.43 min      |Adam       |85%                 |70.4%           |62,470              |
+|Network in Network |48 min        |Adam       |98.2%               |82.78%          |794,170             |
+|VGG-16             |98 min        |Adam       |99.2%               |85.5%           |27,331,702          |
+|Residual Network   |86.6 min      |Adam       |98.54%              |*81%*           |467,946             |
 
 ## Additional Information
 Because I don't have enough machines to train the larger networks.
