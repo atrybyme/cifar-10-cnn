@@ -44,15 +44,16 @@ All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics P
 
 |Architecture       |Training Time | Optimizer |Trainset Accuracy|Testset Accuracy|
 |:------------------|:-------------|:----------|:----------------|:---------------|
-|Le-Net             |
-|Network in Network |
-|VGG-16             |
-|Residual Network   |
+|Le-Net             |5.43 min      |Adam       |85%              |70.4%           |
+|Network in Network |48 min        |Adam       |98.2%            |82.78%          |
+|VGG-16             |98 min        |Adam       |99.2%            |85.5%           |
+|Residual Network   |86.6 min      |Adam       |98.54%           |81%             |*
 
 ## Additional Information
 Because I don't have enough machines to train the larger networks.
 I decreased the epochs to 50.This decreased the accuracy.
-Also the models seems to overfit the training data. This is due to inefficient use of Dropout and due the fact that I did not used Image Augmentation. I will soon resolve this issue.
+**SGD** with **Momentum** prooved to be a better optimizer(even a little) than **Adam** on the above architecture.I will soon update the optimizer.
+*Also the models seems to overfit the training data. This is due to inefficient use of Dropout and due the fact that I did not used Image Augmentation. I will soon resolve this issue.*
 
 **Please feel free to contact me for any questions and Suggestions.**
 
