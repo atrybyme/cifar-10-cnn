@@ -52,8 +52,11 @@ All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics P
 ## Additional Information
 Because I don't have enough machines to train the larger networks.
 I decreased the epochs to 50.This decreased the accuracy.
+
 **SGD** with **Momentum** prooved to be a better optimizer(even a little) than **Adam** on the above architecture.I will soon update the optimizer.
+
 *Also the models seems to overfit the training data. This is due to inefficient use of Dropout and due the fact that I did not used Image Augmentation. I will soon resolve this issue.*
+
 
 **Please feel free to contact me for any questions and Suggestions.**
 
