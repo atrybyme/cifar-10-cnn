@@ -4,7 +4,7 @@ The repository contains some of the famous architectures on CNN implimented on c
 
 ![cifar10][1]
 
-I havev used **Keras** with **Tensorflow** backend to impliment all the architectures.
+I have used **Keras** with **Tensorflow** backend to implement all the architectures.
 All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics Processor.
 
 ## Requirements:
@@ -31,7 +31,7 @@ All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics P
   - A classic and simple model.The model have alternate convolution and pooling layer.The output of these layer is connected to 2 Fully Connected Layer.Except the last one each layer uses *'Relu'* activation function.Last layer uses Softmax to classify.
   - [LeNet-5][2]
 - **Network in Network**
-  - NIN instantiate the micro neural network with a multilayer perceptron, which is a potent function approximator. The feature maps are obtained by sliding the micro networks over the input in a similar manner as CNN; they are then fed into the next layer. Deep NIN can be implemented by stacking mutiple of the above described structure.
+  - NIN instantiate the micro neural network with a multilayer perceptron, which is a potent function approximator. The feature maps are obtained by sliding the micro networks over the input in a similar manner as CNN; they are then fed into the next layer. Deep NIN can be implemented by stacking multiple of the above described structure.
   - [Network In Network][3]
 - **VGG16**
   - It is a really deep network.This network has a total of about 138 million parameters but its very easy to understand.Instead having so many hyper parameters,the model uses a much simpler network where you focus on just having conv layers that are just 3 by 3 filters with stride 1 and always use the SAME padding, and make all your max polling layers 2 by 2 with a strid of 2.
@@ -53,7 +53,7 @@ All the models were trained on my laptop with Nvidia Geforce GTX 960M Graphics P
 Because I don't have enough machines to train the larger networks.
 I decreased the epochs to 50.This decreased the accuracy.
 
-**SGD** with **Momentum** prooved to be a better optimizer(even a little) than **Adam** on the above architecture.I will soon update the optimizer.
+**SGD** with **Momentum** proved to be a better optimizer(even a little) than **Adam** on the above architecture.I will soon update the optimizer.
 
 *Also the models seems to overfit the training data. This is due to inefficient use of Dropout and due the fact that I did not used Image Augmentation. I will soon resolve this issue.*
 
