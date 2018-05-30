@@ -1,4 +1,4 @@
-
+# Author : Shubhansh Awasthi
 # coding: utf-8
 
 # In[1]:
@@ -157,3 +157,4 @@ print(model.summary())
 #Save the model
 model.save('vgg16_model.h5')
 
+# Author : Shubhansh Awasthi
