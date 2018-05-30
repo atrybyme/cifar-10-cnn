@@ -1,4 +1,4 @@
-
+# Author : Shubhansh Awasthi
 # coding: utf-8
 
 # In[3]:
@@ -61,4 +61,4 @@ print("ACCURACY ON Testing sET",(np.sum(e))/len(y_test))
 
 #Additional Information about the model
 print(model.summary())
-
+# Author : Shubhansh Awasthi
