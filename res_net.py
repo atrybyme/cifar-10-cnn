@@ -1,4 +1,4 @@
-
+# Author : Shubhansh Awasthi
 # coding: utf-8
 
 # In[6]:
@@ -163,3 +163,4 @@ print(full_model.summary())
 #Save the model
 full_model.save('resnet_model.h5')
 
+# Author : Shubhansh Awasthi
